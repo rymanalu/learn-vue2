@@ -11,9 +11,16 @@
 </head>
 <body>
     <div id="root" class="container">
-        <coupon @applied="onCouponApplied"></coupon>
+        <modal>
+            <template slot="header">My Title</template>
 
-        <h1 v-if="couponApplied">You used a coupon!</h1>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus urna erat, non feugiat nulla volutpat in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut vel metus accumsan, faucibus odio at, accumsan libero. Aliquam fermentum nec sem non maximus.
+
+            <template slot="footer">
+                <a class="button is-success">Save changes</a>
+                <a class="button">Cancel</a>
+            </template>
+        </modal>
     </div>
 
     <script src="https://unpkg.com/vue@2.2.6"></script>
