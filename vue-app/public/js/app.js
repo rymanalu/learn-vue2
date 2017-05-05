@@ -1,13 +1,23 @@
-Vue.prototype.$http = axios;
+let store = {
+    user: {
+        name: 'John Doe'
+    }
+};
 
 new Vue({
-    el: '#app',
+    el: '#one',
 
     data: {
-        skills: []
-    },
+        foo: 'bar',
+        shared: store
+    }
+});
 
-    mounted() {
-        this.$http.get('/api/skills').then(response => this.skills = response.data);
+new Vue({
+    el: '#two',
+
+    data: {
+        foo: 'other',
+        shared: store
     }
 });
